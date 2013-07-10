@@ -1,0 +1,31 @@
+<launch>
+    <param name="/use_sim_time" value="true" />
+
+    <node name="gazebo"
+          pkg="gazebo"
+          type="gazebo"
+          args="-u $(find msmr_simulator)/worlds/insung.world"     
+          respawn="false"
+          output="screen"/>
+
+    <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/>
+<group ns="robot1">
+    <include file="$(find msmr_simulator)/launch/msmr_laser_mobile_base.launch" >
+    	<arg name="x" value="1.5"/>
+    	<arg name="y" value="-1.5"/>
+    	<arg name="z" value="0.0"/>
+    	<arg name="n" value="1"/>
+    </include>
+</group>
+
+<group ns="robot2">
+    <include file="$(find msmr_simulator)/launch/msmr_laser_mobile_base.launch" >
+    	<arg name="x" value="0.0"/>
+    	<arg name="y" value="0.0"/>
+    	<arg name="z" value="0.0"/>
+    	<arg name="n" value="2"/>
+    </include>
+</group>
+
+</launch>
+

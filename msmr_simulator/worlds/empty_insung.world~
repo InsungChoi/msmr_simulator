@@ -1,0 +1,741 @@
+<?xml version ='1.0'?>
+<gazebo version ='1.0'>
+<world name='default'>
+  <scene>
+    <ambient rgba='0.500000 0.500000 0.500000 1.000000'/>
+    <background rgba='0.500000 0.500000 0.500000 1.000000'/>
+    <shadows enabled='0'/>
+  </scene>
+  <physics type='ode' update_rate='1000000.000000'>
+    <gravity xyz='0.000000 0.000000 -9.800000'/>
+    <ode>
+      <solver type='quick' dt='0.001000' iters='10' precon_iters='0' sor='1.300000'/>
+      <constraints cfm='0.000000' erp='0.200000' contact_max_correcting_vel='100.000000' contact_surface_layer='0.001000'/>
+    </ode>
+  </physics>
+  <model name='plane1_model' static='1'>
+    <link name='body' gravity='1' self_collide='0' kinematic='0'>
+      <collision name='geom_1' laser_retro='0.000000'>
+        <geometry>
+          <plane normal='0.000000 0.000000 1.000000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='10.000000' mu2='10.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='1000000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='10000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.000100'/>
+          </contact>
+        </surface>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+      </collision>
+      <visual name='visual_1' cast_shadows='0' laser_retro='0.000000' transparency='0.000000'>
+        <geometry>
+          <plane normal='0.000000 0.000000 1.000000'/>
+        </geometry>
+        <material script='Gazebo/Grey'/>
+      </visual>
+      <damping/>
+      <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+    </link>
+  </model>
+  <light name='my_light' type='directional' cast_shadows='0'>
+    <origin pose='0.000000 0.000000 30.000000 0.000000 -0.000000 0.000000'/>
+    <diffuse rgba='0.900000 0.900000 0.900000 1.000000'/>
+    <specular rgba='0.100000 0.100000 0.100000 1.000000'/>
+    <attenuation range='20.000000' linear='1.000000' constant='1.000000' quadratic='0.000000'/>
+    <direction xyz='0.000000 0.000000 -1.000000'/>
+  </light>
+  <plugin name='joint_trajectory_plugin' filename='libgazebo_ros_joint_trajectory.so'/>
+  <model name='robot2' static='0'>
+    <origin pose='-10.000000 10.000000 0.000000 0.000000 -0.000000 0.000000'/>
+    <link name='base_footprint' gravity='1' self_collide='0' kinematic='0'>
+      <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+      <inertial mass='22.200100' density='1.000000'>
+        <origin pose='0.056040 0.000000 0.137725 0.000000 -0.000000 0.000000'/>
+        <inertia ixx='1.740770' ixy='0.000000' ixz='-0.153096' iyy='1.831180' iyz='0.000000' izz='1.390510'/>
+      </inertial>
+      <collision name='base_footprint_geom' laser_retro='0.000000'>
+        <origin pose='0.000000 0.000000 0.128000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.001000 0.001000 0.001000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_footprint_geom_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.001000 0.001000 0.001000'/>
+        </geometry>
+      </visual>
+      <collision name='base_footprint_geom_base_link' laser_retro='0.000000'>
+        <origin pose='0.063000 0.000000 0.128000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_base_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_footprint_geom_base_link_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.063000 0.000000 0.128000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_base_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <material script='Erratic/BlueBrushedAluminum'/>
+      </visual>
+      <collision name='base_footprint_geom_base_scan_link' laser_retro='0.000000'>
+        <origin pose='0.215500 0.000000 0.171500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <cylinder radius='0.022900' length='0.028000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_footprint_geom_base_scan_link_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.215500 0.000000 0.171500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <cylinder radius='0.022900' length='0.028000'/>
+        </geometry>
+        <material script='Erratic/Black'/>
+      </visual>
+      <collision name='base_footprint_geom_computer_link' laser_retro='0.000000'>
+        <origin pose='-0.029500 0.000000 0.235500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.170000 0.175000 0.056000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_footprint_geom_computer_link_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='-0.029500 0.000000 0.235500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.170000 0.175000 0.056000'/>
+        </geometry>
+        <material script='Erratic/BlueBrushedAluminum'/>
+      </visual>
+      <collision name='base_footprint_geom_laser_base_link' laser_retro='0.000000'>
+        <origin pose='0.215500 0.000000 0.132500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.050000 0.050000 0.050000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_footprint_geom_laser_base_link_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.215500 0.000000 0.132500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.050000 0.050000 0.050000'/>
+        </geometry>
+        <material script='Erratic/Grey'/>
+      </visual>
+      <sensor name='laser' type='ray' always_on='0' update_rate='10.000000' visualize='0'>
+        <origin pose='0.215500 0.000000 0.157500 0.000000 -0.000000 0.000000'/>
+        <ray>
+          <scan>
+            <horizontal samples='683' resolution='1.000000' min_angle='-2.356194' max_angle='2.356194'/>
+            <vertical samples='1' resolution='1.000000' min_angle='0.000000' max_angle='0.000000'/>
+          </scan>
+          <range min='0.060000' max='4.000000' resolution='0.001000'/>
+        </ray>
+        <plugin name='gazebo_ros_base_scan_link_controller' filename='libgazebo_ros_laser.so'>
+          <gaussianNoise>0.005</gaussianNoise>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>10.0</updateRate>
+          <topicName>base_scan/scan</topicName>
+          <frameName>base_scan_link</frameName>
+          <robotNamespace>/robot2/</robotNamespace>
+        </plugin>
+      </sensor>
+    </link>
+    <link name='base_caster_support_link' gravity='1' self_collide='0' kinematic='0'>
+      <origin pose='-0.125000 0.000000 0.085000 0.000000 -0.000000 0.000000'/>
+      <inertial mass='0.100000' density='1.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <inertia ixx='0.010000' ixy='0.000000' ixz='0.000000' iyy='0.010000' iyz='0.000000' izz='0.010000'/>
+      </inertial>
+      <collision name='base_caster_support_link_geom' laser_retro='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_caster_support_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_caster_support_link_geom_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_caster_support_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <material script='Erratic/White'/>
+      </visual>
+    </link>
+    <link name='caster_wheel_link' gravity='1' self_collide='0' kinematic='0'>
+      <origin pose='-0.150000 0.000000 0.038100 0.000000 -0.000000 0.000000'/>
+      <inertial mass='0.100000' density='1.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <inertia ixx='0.012412' ixy='-0.000712' ixz='0.000503' iyy='0.015218' iyz='-0.000004' izz='0.011764'/>
+      </inertial>
+      <collision name='caster_wheel_link_geom' laser_retro='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_caster_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='100.000000' mu2='100.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='caster_wheel_link_geom_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_caster_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <material script='Erratic/Black'/>
+      </visual>
+    </link>
+    <link name='base_link_left_wheel_link' gravity='1' self_collide='0' kinematic='0'>
+      <origin pose='0.138000 0.165250 0.075000 0.000000 -0.000000 0.000000'/>
+      <inertial mass='0.100000' density='1.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <inertia ixx='0.012412' ixy='0.000000' ixz='0.000000' iyy='0.015218' iyz='0.000000' izz='0.011764'/>
+      </inertial>
+      <collision name='base_link_left_wheel_link_geom' laser_retro='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_front_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='100.000000' mu2='100.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_link_left_wheel_link_geom_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_front_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <material script='Erratic/Grey'/>
+      </visual>
+    </link>
+    <link name='base_link_right_wheel_link' gravity='1' self_collide='0' kinematic='0'>
+      <origin pose='0.138000 -0.165250 0.075000 0.000000 -0.000000 0.000000'/>
+      <inertial mass='0.100000' density='1.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <inertia ixx='0.012412' ixy='0.000000' ixz='0.000000' iyy='0.015218' iyz='0.000000' izz='0.011764'/>
+      </inertial>
+      <collision name='base_link_right_wheel_link_geom' laser_retro='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_front_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='100.000000' mu2='100.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_link_right_wheel_link_geom_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_front_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <material script='Erratic/Grey'/>
+      </visual>
+    </link>
+    <joint name='base_caster_support_joint' type='revolute'>
+      <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+      <parent link='base_footprint'/>
+      <child link='base_caster_support_link'/>
+      <axis xyz='0.000000 0.000000 1.000000'>
+        <dynamics damping='0.000000' friction='0.000000'/>
+        <limit lower='-10000000000000000.000000' upper='10000000000000000.000000' effort='0.000000' velocity='0.000000'/>
+      </axis>
+    </joint>
+    <joint name='caster_wheel_joint' type='revolute'>
+      <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+      <parent link='base_caster_support_link'/>
+      <child link='caster_wheel_link'/>
+      <axis xyz='0.000000 1.000000 0.000000'>
+        <dynamics damping='0.000000' friction='0.000000'/>
+        <limit lower='-10000000000000000.000000' upper='10000000000000000.000000' effort='0.000000' velocity='0.000000'/>
+      </axis>
+    </joint>
+    <joint name='base_link_left_wheel_joint' type='revolute'>
+      <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+      <parent link='base_footprint'/>
+      <child link='base_link_left_wheel_link'/>
+      <axis xyz='0.000000 1.000000 0.000000'>
+        <dynamics damping='0.000000' friction='0.000000'/>
+        <limit lower='-10000000000000000.000000' upper='10000000000000000.000000' effort='0.000000' velocity='0.000000'/>
+      </axis>
+    </joint>
+    <joint name='base_link_right_wheel_joint' type='revolute'>
+      <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+      <parent link='base_footprint'/>
+      <child link='base_link_right_wheel_link'/>
+      <axis xyz='0.000000 1.000000 0.000000'>
+        <dynamics damping='0.000000' friction='0.000000'/>
+        <limit lower='-10000000000000000.000000' upper='10000000000000000.000000' effort='0.000000' velocity='0.000000'/>
+      </axis>
+    </joint>
+    <plugin name='differential_drive_controller_2' filename='libdiffdrive_plugin_2.so'>
+      <alwaysOn>1</alwaysOn>
+      <update>100</update>
+      <updateRate>100.0</updateRate>
+      <leftJoint>base_link_right_wheel_joint</leftJoint>
+      <rightJoint>base_link_left_wheel_joint</rightJoint>
+      <wheelSeparation>0.3305</wheelSeparation>
+      <wheelDiameter>0.15</wheelDiameter>
+      <torque>5</torque>
+      <topicName>cmd_vel</topicName>
+      <robotNamespace>/robot2/</robotNamespace>
+    </plugin>
+    <plugin name='p3d_base_controller_2' filename='libgazebo_ros_p3d.so'>
+      <alwaysOn>1</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <topicName>base_pose_ground_truth</topicName>
+      <gaussianNoise>0.01</gaussianNoise>
+      <frameName>map</frameName>
+      <xyzOffsets>0 0 0</xyzOffsets>
+      <rpyOffsets>0 0 0</rpyOffsets>
+      <bodyName>base_footprint</bodyName>
+      <robotNamespace>/robot2/</robotNamespace>
+    </plugin>
+    <plugin name='gazebo_ros_controller_manager_2' filename='libgazebo_ros_controller_manager.so'>
+      <alwaysOn>1</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <robotNamespace>/robot2/</robotNamespace>
+    </plugin>
+  </model>
+  <model name='robot1' static='0'>
+    <origin pose='-9.000000 9.000000 0.000000 0.000000 -0.000000 0.000000'/>
+    <link name='base_footprint' gravity='1' self_collide='0' kinematic='0'>
+      <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+      <inertial mass='22.200100' density='1.000000'>
+        <origin pose='0.056040 0.000000 0.137725 0.000000 -0.000000 0.000000'/>
+        <inertia ixx='1.740770' ixy='0.000000' ixz='-0.153096' iyy='1.831180' iyz='0.000000' izz='1.390510'/>
+      </inertial>
+      <collision name='base_footprint_geom' laser_retro='0.000000'>
+        <origin pose='0.000000 0.000000 0.128000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.001000 0.001000 0.001000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_footprint_geom_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.001000 0.001000 0.001000'/>
+        </geometry>
+      </visual>
+      <collision name='base_footprint_geom_base_link' laser_retro='0.000000'>
+        <origin pose='0.063000 0.000000 0.128000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_base_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_footprint_geom_base_link_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.063000 0.000000 0.128000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_base_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <material script='Erratic/BlueBrushedAluminum'/>
+      </visual>
+      <collision name='base_footprint_geom_base_scan_link' laser_retro='0.000000'>
+        <origin pose='0.215500 0.000000 0.171500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <cylinder radius='0.022900' length='0.028000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_footprint_geom_base_scan_link_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.215500 0.000000 0.171500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <cylinder radius='0.022900' length='0.028000'/>
+        </geometry>
+        <material script='Erratic/Black'/>
+      </visual>
+      <collision name='base_footprint_geom_computer_link' laser_retro='0.000000'>
+        <origin pose='-0.029500 0.000000 0.235500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.170000 0.175000 0.056000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_footprint_geom_computer_link_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='-0.029500 0.000000 0.235500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.170000 0.175000 0.056000'/>
+        </geometry>
+        <material script='Erratic/BlueBrushedAluminum'/>
+      </visual>
+      <collision name='base_footprint_geom_laser_base_link' laser_retro='0.000000'>
+        <origin pose='0.215500 0.000000 0.132500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.050000 0.050000 0.050000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_footprint_geom_laser_base_link_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.215500 0.000000 0.132500 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <box size='0.050000 0.050000 0.050000'/>
+        </geometry>
+        <material script='Erratic/Grey'/>
+      </visual>
+      <sensor name='laser' type='ray' always_on='0' update_rate='10.000000' visualize='0'>
+        <origin pose='0.215500 0.000000 0.157500 0.000000 -0.000000 0.000000'/>
+        <ray>
+          <scan>
+            <horizontal samples='683' resolution='1.000000' min_angle='-2.356194' max_angle='2.356194'/>
+            <vertical samples='1' resolution='1.000000' min_angle='0.000000' max_angle='0.000000'/>
+          </scan>
+          <range min='0.060000' max='4.000000' resolution='0.001000'/>
+        </ray>
+        <plugin name='gazebo_ros_base_scan_link_controller' filename='libgazebo_ros_laser.so'>
+          <gaussianNoise>0.005</gaussianNoise>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>10.0</updateRate>
+          <topicName>base_scan/scan</topicName>
+          <frameName>base_scan_link</frameName>
+          <robotNamespace>/robot1/</robotNamespace>
+        </plugin>
+      </sensor>
+    </link>
+    <link name='base_caster_support_link' gravity='1' self_collide='0' kinematic='0'>
+      <origin pose='-0.125000 0.000000 0.085000 0.000000 -0.000000 0.000000'/>
+      <inertial mass='0.100000' density='1.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <inertia ixx='0.010000' ixy='0.000000' ixz='0.000000' iyy='0.010000' iyz='0.000000' izz='0.010000'/>
+      </inertial>
+      <collision name='base_caster_support_link_geom' laser_retro='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_caster_support_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='-1.000000' mu2='-1.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_caster_support_link_geom_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_caster_support_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <material script='Erratic/White'/>
+      </visual>
+    </link>
+    <link name='caster_wheel_link' gravity='1' self_collide='0' kinematic='0'>
+      <origin pose='-0.150000 0.000000 0.038100 0.000000 -0.000000 0.000000'/>
+      <inertial mass='0.100000' density='1.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <inertia ixx='0.012412' ixy='-0.000712' ixz='0.000503' iyy='0.015218' iyz='-0.000004' izz='0.011764'/>
+      </inertial>
+      <collision name='caster_wheel_link_geom' laser_retro='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_caster_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='100.000000' mu2='100.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='caster_wheel_link_geom_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_caster_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <material script='Erratic/Black'/>
+      </visual>
+    </link>
+    <link name='base_link_left_wheel_link' gravity='1' self_collide='0' kinematic='0'>
+      <origin pose='0.138000 0.165250 0.075000 0.000000 -0.000000 0.000000'/>
+      <inertial mass='0.100000' density='1.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <inertia ixx='0.012412' ixy='0.000000' ixz='0.000000' iyy='0.015218' iyz='0.000000' izz='0.011764'/>
+      </inertial>
+      <collision name='base_link_left_wheel_link_geom' laser_retro='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_front_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='100.000000' mu2='100.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_link_left_wheel_link_geom_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_front_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <material script='Erratic/Grey'/>
+      </visual>
+    </link>
+    <link name='base_link_right_wheel_link' gravity='1' self_collide='0' kinematic='0'>
+      <origin pose='0.138000 -0.165250 0.075000 0.000000 -0.000000 0.000000'/>
+      <inertial mass='0.100000' density='1.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <inertia ixx='0.012412' ixy='0.000000' ixz='0.000000' iyy='0.015218' iyz='0.000000' izz='0.011764'/>
+      </inertial>
+      <collision name='base_link_right_wheel_link_geom' laser_retro='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_front_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <surface>
+          <friction>
+            <ode mu='100.000000' mu2='100.000000' fdir1='0.000000 0.000000 0.000000' slip1='0.000000' slip2='0.000000'/>
+          </friction>
+          <bounce restitution_coefficient='0.000000' threshold='100000.000000'/>
+          <contact>
+            <ode soft_cfm='0.000000' soft_erp='0.200000' kp='1000000.000000' kd='1.000000' max_vel='100.000000' min_depth='0.001000'/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='base_link_right_wheel_link_geom_visual' cast_shadows='1' laser_retro='0.000000' transparency='0.000000'>
+        <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+        <geometry>
+          <mesh filename='/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/collada/erratic_front_wheel_link.dae' scale='1.000000 1.000000 1.000000'/>
+        </geometry>
+        <material script='Erratic/Grey'/>
+      </visual>
+    </link>
+    <joint name='base_caster_support_joint' type='revolute'>
+      <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+      <parent link='base_footprint'/>
+      <child link='base_caster_support_link'/>
+      <axis xyz='0.000000 0.000000 1.000000'>
+        <dynamics damping='0.000000' friction='0.000000'/>
+        <limit lower='-10000000000000000.000000' upper='10000000000000000.000000' effort='0.000000' velocity='0.000000'/>
+      </axis>
+    </joint>
+    <joint name='caster_wheel_joint' type='revolute'>
+      <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+      <parent link='base_caster_support_link'/>
+      <child link='caster_wheel_link'/>
+      <axis xyz='0.000000 1.000000 0.000000'>
+        <dynamics damping='0.000000' friction='0.000000'/>
+        <limit lower='-10000000000000000.000000' upper='10000000000000000.000000' effort='0.000000' velocity='0.000000'/>
+      </axis>
+    </joint>
+    <joint name='base_link_left_wheel_joint' type='revolute'>
+      <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+      <parent link='base_footprint'/>
+      <child link='base_link_left_wheel_link'/>
+      <axis xyz='0.000000 1.000000 0.000000'>
+        <dynamics damping='0.000000' friction='0.000000'/>
+        <limit lower='-10000000000000000.000000' upper='10000000000000000.000000' effort='0.000000' velocity='0.000000'/>
+      </axis>
+    </joint>
+    <joint name='base_link_right_wheel_joint' type='revolute'>
+      <origin pose='0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000'/>
+      <parent link='base_footprint'/>
+      <child link='base_link_right_wheel_link'/>
+      <axis xyz='0.000000 1.000000 0.000000'>
+        <dynamics damping='0.000000' friction='0.000000'/>
+        <limit lower='-10000000000000000.000000' upper='10000000000000000.000000' effort='0.000000' velocity='0.000000'/>
+      </axis>
+    </joint>
+    <plugin name='differential_drive_controller_1' filename='libdiffdrive_plugin_1.so'>
+      <alwaysOn>1</alwaysOn>
+      <update>100</update>
+      <updateRate>100.0</updateRate>
+      <leftJoint>base_link_right_wheel_joint</leftJoint>
+      <rightJoint>base_link_left_wheel_joint</rightJoint>
+      <wheelSeparation>0.3305</wheelSeparation>
+      <wheelDiameter>0.15</wheelDiameter>
+      <torque>5</torque>
+      <topicName>cmd_vel</topicName>
+      <robotNamespace>/robot1/</robotNamespace>
+    </plugin>
+    <plugin name='p3d_base_controller_1' filename='libgazebo_ros_p3d.so'>
+      <alwaysOn>1</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <topicName>base_pose_ground_truth</topicName>
+      <gaussianNoise>0.01</gaussianNoise>
+      <frameName>map</frameName>
+      <xyzOffsets>0 0 0</xyzOffsets>
+      <rpyOffsets>0 0 0</rpyOffsets>
+      <bodyName>base_footprint</bodyName>
+      <robotNamespace>/robot1/</robotNamespace>
+    </plugin>
+    <plugin name='gazebo_ros_controller_manager_1' filename='libgazebo_ros_controller_manager.so'>
+      <alwaysOn>1</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <robotNamespace>/robot1/</robotNamespace>
+    </plugin>
+  </model>
+  <state world_name='default' time='0 0'>
+    <model name='plane1_model'>
+      <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <link name='body'>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <velocity>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</velocity>
+      </link>
+    </model>
+    <model name='robot2'>
+      <pose>-10.000000 10.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <link name='base_footprint'>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <velocity>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</velocity>
+      </link>
+      <link name='base_caster_support_link'>
+        <pose>-0.125000 0.000000 0.085000 0.000000 -0.000000 0.000000</pose>
+        <velocity>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</velocity>
+      </link>
+      <link name='caster_wheel_link'>
+        <pose>-0.150000 0.000000 0.038100 0.000000 -0.000000 0.000000</pose>
+        <velocity>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</velocity>
+      </link>
+      <link name='base_link_left_wheel_link'>
+        <pose>0.138000 0.165250 0.075000 0.000000 -0.000000 0.000000</pose>
+        <velocity>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</velocity>
+      </link>
+      <link name='base_link_right_wheel_link'>
+        <pose>0.138000 -0.165250 0.075000 0.000000 -0.000000 0.000000</pose>
+        <velocity>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</velocity>
+      </link>
+    </model>
+    <model name='robot1'>
+      <pose>-9.000000 9.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <link name='base_footprint'>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <velocity>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</velocity>
+      </link>
+      <link name='base_caster_support_link'>
+        <pose>-0.125000 0.000000 0.085000 0.000000 -0.000000 0.000000</pose>
+        <velocity>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</velocity>
+      </link>
+      <link name='caster_wheel_link'>
+        <pose>-0.150000 0.000000 0.038100 0.000000 -0.000000 0.000000</pose>
+        <velocity>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</velocity>
+      </link>
+      <link name='base_link_left_wheel_link'>
+        <pose>0.138000 0.165250 0.075000 0.000000 -0.000000 0.000000</pose>
+        <velocity>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</velocity>
+      </link>
+      <link name='base_link_right_wheel_link'>
+        <pose>0.138000 -0.165250 0.075000 0.000000 -0.000000 0.000000</pose>
+        <velocity>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</velocity>
+      </link>
+    </model>
+  </state>
+</world>
+</gazebo>

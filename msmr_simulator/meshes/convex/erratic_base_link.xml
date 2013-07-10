@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <NXUSTREAM2>
+    <NxuPhysicsCollection id="beshon" sdkVersion="244" nxuVersion="100">
+      <NxPhysicsSDKDesc id="SDK">
+        <hwPageSize>65536</hwPageSize>
+        <hwPageMax>256</hwPageMax>
+        <hwConvexMax>2048</hwConvexMax>
+      </NxPhysicsSDKDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_0">
+    <points>
+      0.102750003 0.142749995 0.001  0.108000003 0.093500003 0.001  0.108000003 0.142749995 0.001  0.108000003 0.142749995 -0.077500001  
+      0.102750003 0.142749995 -0.077500001  0.102750003 0.093500003 -0.077500001  0.108000003 0.093500003 -0.077500001  0.107000001 0.093500003 0.001  
+    </points>
+    <triangles>
+      0 1 2  3 2 1  3 0 2  4 5 0  
+      4 0 3  4 3 5  6 1 5  6 5 3  
+      6 3 1  7 0 5  7 5 1  7 1 0  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_1">
+    <points>
+      0.108000003 -0.142749995 0.001  0.102750003 -0.142749995 0.001  0.102750003 -0.142749995 -0.077500001  0.108000003 -0.093500003 0.001  
+      0.108000003 -0.142749995 -0.077500001  0.108000003 -0.093500003 -0.077500001  0.102750003 -0.093500003 -0.077500001  0.107000001 -0.093500003 0.001  
+    </points>
+    <triangles>
+      0 1 2  1 0 3  4 3 0  4 0 2  
+      5 3 4  5 4 2  6 3 5  6 5 2  
+      6 2 1  7 1 3  7 3 6  7 6 1  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_2">
+    <points>
+      -0.108000003 0.142749995 0.001  -0.107000001 0.093500003 0.001  -0.098750003 0.142749995 0.001  -0.098750003 0.142749995 -0.077500001  
+      -0.098750003 0.093500003 -0.077500001  -0.108000003 0.093500003 -0.077500001  -0.108000003 0.142749995 -0.077500001  -0.108000003 0.093500003 0.001  
+      -0.098750003 0.141749993 0.001  -0.098750003 0.093500003 -0.076499999  
+    </points>
+    <triangles>
+      0 1 2  3 0 2  4 1 5  4 5 3  
+      4 3 2  6 5 0  6 0 3  6 3 5  
+      7 0 5  7 5 1  7 1 0  8 2 1  
+      8 4 2  9 1 4  9 4 8  9 8 1  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_3">
+    <points>
+      -0.098750003 -0.142749995 0.001  -0.108000003 -0.142749995 0.001  -0.108000003 -0.142749995 -0.077500001  -0.107000001 -0.093500003 0.001  
+      -0.108000003 -0.093500003 -0.077500001  -0.098750003 -0.093500003 -0.077500001  -0.098750003 -0.142749995 -0.077500001  -0.108000003 -0.093500003 0.001  
+      -0.098750003 -0.141749993 0.001  -0.098750003 -0.093500003 -0.076499999  
+    </points>
+    <triangles>
+      0 1 2  1 0 3  4 3 5  4 5 2  
+      4 2 1  6 0 2  6 2 5  6 5 0  
+      7 1 3  7 3 4  7 4 1  8 3 0  
+      8 0 5  9 5 3  9 3 8  9 8 5  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_4">
+    <points>
+      0.102750003 -0.093500003 -0.076499999  0.102750003 0.093500003 -0.077500001  0.102750003 0.093500003 -0.076499999  -0.098750003 0.093500003 -0.076499999  
+      0.102750003 -0.093500003 -0.077500001  -0.098750003 -0.093500003 -0.077500001  -0.098750003 0.093500003 -0.077500001  -0.098750003 -0.093500003 -0.076499999  
+    </points>
+    <triangles>
+      0 1 2  3 2 1  3 0 2  4 0 5  
+      4 5 1  4 1 0  6 1 5  6 5 3  
+      6 3 1  7 5 0  7 0 3  7 3 5  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_5">
+    <points>
+      0.107000001 0.093500003 0.001  0.108000003 -0.093500003 0.001  0.108000003 0.093500003 0.001  0.102750003 0.093500003 -0.077500001  
+      0.102750003 -0.093500003 -0.077500001  0.108000003 -0.093500003 -0.077500001  0.108000003 0.093500003 -0.077500001  0.107000001 -0.093500003 0.001  
+    </points>
+    <triangles>
+      0 1 2  3 4 0  3 0 2  5 4 3  
+      5 2 1  5 1 4  6 3 2  6 2 5  
+      6 5 3  7 0 4  7 4 1  7 1 0  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_6">
+    <points>
+      0.102750003 -0.093500003 0.079499997  0.102750003 0.093500003 0.076499999  0.102750003 0.093500003 0.079499997  -0.098750003 0.093500003 0.076499999  
+      -0.098750003 -0.093500003 0.076499999  -0.098750003 -0.093500003 0.079499997  0.102750003 -0.093500003 0.076499999  -0.098750003 0.093500003 0.079499997  
+    </points>
+    <triangles>
+      0 1 2  3 2 1  3 1 4  5 3 4  
+      5 4 0  5 0 2  6 0 4  6 4 1  
+      6 1 0  7 2 3  7 3 5  7 5 2  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_7">
+    <points>
+      0.002 0.142749995 -0.077500001  0.002 0.093500003 -0.077500001  -0.098750003 0.093500003 -0.077500001  0.002 0.142749995 0.001  
+      -0.098750003 0.142749995 -0.077500001  -0.098750003 0.142749995 0.001  -0.098750003 0.141749993 0.001  0.002 0.141749993 0.001  
+      -0.098750003 0.093500003 -0.076499999  0.002 0.093500003 -0.076499999  
+    </points>
+    <triangles>
+      0 1 2  1 0 3  4 3 0  4 0 2  
+      5 3 4  5 4 2  6 3 5  6 5 2  
+      7 1 3  7 3 6  8 7 6  8 2 1  
+      8 6 2  9 1 7  9 7 8  9 8 1  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_8">
+    <points>
+      0.002 -0.093500003 -0.077500001  0.002 -0.142749995 -0.077500001  -0.098750003 -0.142749995 -0.077500001  0.002 -0.141749993 0.001  
+      -0.098750003 -0.142749995 0.001  -0.098750003 -0.093500003 -0.076499999  0.002 -0.142749995 0.001  -0.098750003 -0.093500003 -0.077500001  
+      -0.098750003 -0.141749993 0.001  0.002 -0.093500003 -0.076499999  
+    </points>
+    <triangles>
+      0 1 2  1 0 3  4 5 2  4 2 1  
+      6 1 3  6 3 4  6 4 1  7 0 2  
+      7 2 5  7 5 0  8 3 5  8 5 4  
+      8 4 3  9 3 0  9 0 5  9 5 3  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_9">
+    <points>
+      0.102750003 -0.093500003 -0.077500001  0.102750003 -0.142749995 -0.077500001  0.002 -0.142749995 -0.077500001  0.102750003 -0.141749993 0.001  
+      0.002 -0.093500003 -0.076499999  0.002 -0.142749995 0.001  0.081349999 -0.160249993 -0.042001002  0.075000003 -0.160249993 -0.065700002  
+      0.085998997 -0.160249993 -0.059349999  0.064001001 -0.160249993 -0.04665  0.085998997 -0.160249993 -0.04665  0.064001001 -0.160249993 -0.059349999  
+    </points>
+    <triangles>
+      0 1 2  1 0 3  4 3 0  4 0 2  
+      5 3 4  5 4 2  6 3 5  7 2 1  
+      8 6 7  8 7 1  9 6 5  9 7 6  
+      9 5 2  10 3 6  10 6 8  10 1 3  
+      10 8 1  11 2 7  11 7 9  11 9 2  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_10">
+    <points>
+      0.102750003 0.142749995 -0.077500001  0.102750003 0.093500003 -0.077500001  0.002 0.093500003 -0.077500001  0.102750003 0.142749995 0.001  
+      0.002 0.142749995 -0.077500001  0.002 0.142749995 0.001  0.075000003 0.160249993 -0.0403  0.075000003 0.160249993 -0.065700002  
+      0.087700002 0.160249993 -0.052999999  0.0623 0.160249993 -0.052999999  0.081349999 0.160249993 -0.063998997  0.085998997 0.160249993 -0.04665  
+    </points>
+    <triangles>
+      0 1 2  1 0 3  3 2 1  4 0 2  
+      5 2 3  5 4 2  6 5 3  7 0 4  
+      8 7 6  8 3 0  9 6 7  9 7 4  
+      9 4 5  9 5 6  10 0 7  10 7 8  
+      10 8 0  11 6 3  11 3 8  11 8 6  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_11">
+    <points>
+      -0.199499995 0.0095 0.001  -0.107000001 -0.093500003 0.001  -0.107000001 0.093500003 0.001  -0.108000003 0.093500003 -0.077500001  
+      -0.195500001 0 -0.043000001  -0.108000003 -0.093500003 -0.077500001  -0.199499995 -0.0095 0.001  -0.098750003 -0.093500003 -0.077500001  
+      -0.098750003 0.093500003 -0.077500001  -0.199499995 0.0095 -0.0285  -0.199499995 -0.0095 -0.0285  -0.194068 -0.004408 -0.043000001  
+    </points>
+    <triangles>
+      0 1 2  3 0 2  4 3 5  6 1 0  
+      6 5 1  7 5 3  7 2 1  7 1 5  
+      8 3 2  8 2 7  8 7 3  9 6 0  
+      9 0 3  9 3 4  10 6 9  10 9 4  
+      10 5 6  11 4 5  11 5 10  11 10 4  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_12">
+    <points>
+      0.102750003 0.093500003 0.079499997  0.102750003 0.142749995 0.001  0.102750003 0.184499994 0.079499997  -0.098750003 0.184499994 0.079499997  
+      -0.098750003 0.093500003 0.079499997  -0.098750003 0.141749993 0.001  -0.098750003 0.186766997 0.060564  0.102750003 0.186762586 0.060559217  
+      0.102750003 0.093500003 0.076499999  -0.098750003 0.093500003 0.076499999  -0.098750003 0.186000004 0.078000002  0.102750003 0.18598409 0.078063793  
+    </points>
+    <triangles>
+      0 1 2  3 0 2  4 0 3  4 3 5  
+      6 1 5  6 5 3  7 2 1  7 1 6  
+      8 0 4  8 5 1  8 1 0  9 4 5  
+      9 5 8  9 8 4  10 7 6  10 6 3  
+      11 3 2  11 10 3  11 2 7  11 7 10  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_13">
+    <points>
+      0.102750003 -0.185774326 0.078756735  0.102750003 -0.141749993 0.001  0.102750003 -0.093500003 0.079499997  -0.098750003 -0.184499994 0.079499997  
+      -0.098750003 -0.093500003 0.079499997  -0.098750003 -0.142749995 0.001  -0.098750003 -0.186766997 0.060564  0.102750003 -0.186766997 0.060564  
+      -0.098750003 -0.093500003 0.076499999  0.102750003 -0.093500003 0.076499999  -0.098750003 -0.186000004 0.078000002  -0.098750003 -0.141749993 0.001  
+    </points>
+    <triangles>
+      0 1 2  3 0 2  4 5 3  4 3 2  
+      6 3 5  7 1 0  7 5 1  7 6 5  
+      8 5 4  8 4 2  9 2 1  9 1 8  
+      9 8 2  10 6 7  10 7 0  10 0 3  
+      10 3 6  11 1 5  11 5 8  11 8 1  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_14">
+    <points>
+      0.102750003 -0.18525511 0.079282418  0.123673998 -0.185246006 0.079285003  0.123351 0.184499994 0.079499997  0.203262001 -0.102802001 0.060554001  
+      0.102750003 -0.142749995 0.001  0.108000003 0.142749995 0.001  0.203500003 0.102895997 0.061500002  0.102750003 0.185246006 0.079285003  
+      0.201746002 -0.102201 0.079287  0.201746002 0.102201 0.079287  0.124332003 0.186766997 0.060564  0.124332003 -0.186766997 0.060564  
+    </points>
+    <triangles>
+      0 1 2  3 4 5  3 5 6  7 0 2  
+      7 4 0  7 5 4  8 3 6  8 2 1  
+      9 2 8  9 8 6  10 2 9  10 9 6  
+      10 5 7  10 7 2  10 6 5  11 3 8  
+      11 8 1  11 4 3  11 0 4  11 1 0  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxConvexMeshDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_15">
+    <points>
+      -0.098750003 0.142749995 0.001  -0.108000003 -0.142749995 0.001  -0.199499995 0.0095 0.001  -0.098750003 0.184499994 0.079499997  
+      -0.098750003 -0.185258746 0.07928139  -0.131332994 0.186766997 0.060564  -0.197500005 0.115000002 0.078000002  -0.131332994 -0.186766997 0.060564  
+      -0.130695999 0.185298994 0.079269998  -0.130673006 -0.185246006 0.079285003  -0.197500005 -0.115000002 0.078000002  -0.198262006 -0.115300998 0.060554001  
+    </points>
+    <triangles>
+      0 1 2  0 3 4  0 4 1  5 3 0  
+      5 2 6  5 0 2  7 1 4  8 3 5  
+      8 5 6  9 4 3  9 3 8  9 6 10  
+      9 8 6  9 10 7  9 7 4  11 1 7  
+      11 7 10  11 10 6  11 6 2  11 2 1  
+    </triangles>
+  </NxConvexMeshDesc>
+  <NxSceneDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link">
+        <filterBool>false</filterBool>
+        <filterOp0>NX_FILTEROP_AND</filterOp0>
+        <filterOp1>NX_FILTEROP_AND</filterOp1>
+        <filterOp2>NX_FILTEROP_AND</filterOp2>
+        <NxGroupsMask id="groupMask0" bits0="0" bits1="0" bits2="0" bits3="0"/>
+        <NxGroupsMask id="groupMask1" bits0="0" bits1="0" bits2="0" bits3="0"/>
+        <gravity>0 -9.800000191 0</gravity>
+        <maxTimestep>0.016666668</maxTimestep>
+        <maxIter>8</maxIter>
+        <timeStepMethod>NX_TIMESTEP_FIXED</timeStepMethod>
+        <maxBounds>FLT_MIN FLT_MIN FLT_MIN  FLT_MAX FLT_MAX FLT_MAX</maxBounds>
+        <NxSceneLimits id="limits">
+          <maxNbActors>0</maxNbActors>
+          <maxNbBodies>0</maxNbBodies>
+          <maxNbStaticShapes>0</maxNbStaticShapes>
+          <maxNbDynamicShapes>0</maxNbDynamicShapes>
+          <maxNbJoints>0</maxNbJoints>
+        </NxSceneLimits>
+        <simType>NX_SIMULATION_SW</simType>
+        <groundPlane>true</groundPlane>
+        <boundsPlanes>false</boundsPlanes>
+        <NxSceneFlags id="flags">
+          <NX_SF_DISABLE_SSE>false</NX_SF_DISABLE_SSE>
+          <NX_SF_DISABLE_COLLISIONS>false</NX_SF_DISABLE_COLLISIONS>
+          <NX_SF_SIMULATE_SEPARATE_THREAD>true</NX_SF_SIMULATE_SEPARATE_THREAD>
+          <NX_SF_ENABLE_MULTITHREAD>false</NX_SF_ENABLE_MULTITHREAD>
+        </NxSceneFlags>
+        <internalThreadCount>0</internalThreadCount>
+        <backgroundThreadCount>0</backgroundThreadCount>
+        <threadMask>1431655764</threadMask>
+        <backgroundThreadMask>1431655764</backgroundThreadMask>
+        <NxMaterialDesc id="Material_0" userProperties="" hasSpring="false" materialIndex="0">
+          <dynamicFriction>0.5</dynamicFriction>
+          <staticFriction>0.5</staticFriction>
+          <restitution>0</restitution>
+          <dynamicFrictionV>0</dynamicFrictionV>
+          <staticFrictionV>0</staticFrictionV>
+          <frictionCombineMode>NX_CM_AVERAGE</frictionCombineMode>
+          <restitutionCombineMode>NX_CM_AVERAGE</restitutionCombineMode>
+          <dirOfAnisotropy>1 0 0</dirOfAnisotropy>
+          <NxMaterialFlag id="flags">
+            <NX_MF_ANISOTROPIC>false</NX_MF_ANISOTROPIC>
+            <NX_MF_DISABLE_FRICTION>false</NX_MF_DISABLE_FRICTION>
+            <NX_MF_DISABLE_STRONG_FRICTION>false</NX_MF_DISABLE_STRONG_FRICTION>
+          </NxMaterialFlag>
+        </NxMaterialDesc>
+    <NxActorDesc id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link" userProperties="" hasBody="true" name="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link">
+      <globalPose>1 0 0    0 1 0    0 0 1    0 0 0 </globalPose>
+			<NxBodyDesc>
+        <mass>1</mass>
+        <linearDamping>0</linearDamping>
+        <angularDamping>0</angularDamping>
+        <solverIterationCount>32</solverIterationCount>
+        <NxBodyFlag id="flags">
+          <NX_BF_POSE_SLEEP_TEST>true</NX_BF_POSE_SLEEP_TEST>
+          <NX_AF_DISABLE_COLLISION>false</NX_AF_DISABLE_COLLISION>
+        </NxBodyFlag>
+      </NxBodyDesc>
+      <name>Bip01 Pelvis</name>
+      <NxConvexShapeDesc id="Shape_0" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_0">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_1" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_1">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_2" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_2">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_3" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_3">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_4" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_4">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_5" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_5">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_6" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_6">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_7" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_7">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_8" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_8">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_9" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_9">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_10" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_10">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_11" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_11">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_12" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_12">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_13" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_13">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_14" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_14">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+      <NxConvexShapeDesc id="Shape_15" meshData="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link_15">
+      <NxShapeDesc>
+        <localPose>1 0 0    0 1 0    0 0 1    0 0 0 </localPose>
+        <skinWidth>0</skinWidth>
+      </NxShapeDesc>
+      </NxConvexShapeDesc>
+    </NxActorDesc>
+  </NxSceneDesc>
+	 <NxSceneInstance id="/tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_base_link">
+	 	 <sceneName>beshon</sceneName>
+	 	 <NxuUserProperties></NxuUserProperties>
+	 	 <rootNode>1	0	0	0	1	0	0	0	1	0	0 0</rootNode>
+	 	 <newScene>false</newScene>
+	 	 <ignorePlane>true</ignorePlane>
+	 	 <numSceneInstances>0</numSceneInstances>
+	 </NxSceneInstance>
+  </NxuPhysicsCollection>
+</NXUSTREAM2>

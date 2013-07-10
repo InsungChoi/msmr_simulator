@@ -1,0 +1,44 @@
+########################################################################
+# Approximate convex decomposition for triangle mesh /tmp/buildd/ros-fuerte-erratic-robot-0.3.1/debian/ros-fuerte-erratic-robot/opt/ros/fuerte/stacks/erratic_robot/erratic_description/meshes/convex/erratic_caster_wheel_link.obj
+# Input Mesh has 1044 vertices and 2084 triangles.
+# Recursion depth: 5
+# Concavity Threshold Percentage: 5.00
+# Hull Merge Volume Percentage: 10.00
+# Maximum output vertices per hull: 12
+# Hull Skin Width: 0.00
+########################################################################
+########################################################################
+## Hull Piece 1 with 12 vertices and 20 triangles.
+########################################################################
+v -0.029029001 0.004087000 0.024358001
+v 0.002215000 0.002000000 0.038036000
+v -0.031282000 0.011886000 -0.003656000
+v -0.033119000 -0.010897000 0.003871000
+v -0.029029001 -0.004087000 -0.024358001
+v -0.002215000 -0.002000000 -0.038036000
+v 0.012474000 0.011886000 -0.028919000
+v 0.025543001 -0.010897000 -0.021433000
+v 0.037842002 0.002000000 -0.004423000
+v 0.020989999 -0.012700000 0.017612001
+v 0.029185999 0.002000000 0.024490001
+v -0.017483000 -0.009566000 0.030281000
+f 1 2 3
+f 1 3 4
+f 5 4 3
+f 5 3 6
+f 7 6 3
+f 8 6 7
+f 8 7 9
+f 8 4 5
+f 8 5 6
+f 8 10 4
+f 8 9 10
+f 11 3 2
+f 11 7 3
+f 11 9 7
+f 11 2 10
+f 11 10 9
+f 12 2 1
+f 12 1 4
+f 12 10 2
+f 12 4 10

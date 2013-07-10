@@ -1,0 +1,13 @@
+<?xml version ='1.0'?>
+<sdf version ='1.3'>
+  <world name='default'>
+    <include>
+      <uri>model://ales_terrain</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+  </world>
+</sdf>
+
