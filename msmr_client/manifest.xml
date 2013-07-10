@@ -1,0 +1,20 @@
+<package>
+  <description brief="msmr_client">
+
+     msmr_client
+
+  </description>
+  <author>root</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/msmr_client</url>
+  <depend package="roscpp"/>
+  <depend package="std_msgs"/>
+  <depend package="gazebo"/>
+  <depend package="gazebo_plugins"/>
+  <depend package="geometry_msgs"/>
+
+
+</package>
+
+
